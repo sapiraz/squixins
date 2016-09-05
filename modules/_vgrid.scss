@@ -1,0 +1,6 @@
+$grid-rows : 12;
+@for $i from 1 through $grid-rows {
+  .row-#{$i} {
+    height:#{(($i/$grid-rows)*100)}vh;
+  }
+}

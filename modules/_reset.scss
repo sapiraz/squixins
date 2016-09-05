@@ -1,0 +1,9 @@
+@mixin reset($args...){
+    @each $prop in $args {
+        @if $prop == "list-style" {
+            #{$prop} : none;
+        } @else {
+            #{$prop} : 0;
+        }
+    }
+}

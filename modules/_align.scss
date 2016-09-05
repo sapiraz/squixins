@@ -1,0 +1,31 @@
+@mixin fixedPosition(){
+    position:fixed;
+    @include vendor_prop(backface-visibility,hidden);
+}
+@mixin keyframes($name){
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+    @-o-keyframes #{$name} {
+		@content;
+	}
+	@-ie-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+@mixin verticalAlign(){
+    top:50%;
+    @include vendor_prop(transform,translatey(-50%));
+}
+@mixin completeCenter(){
+    top:50%;
+    left:50%;
+    text-align: center;
+    @include vendor_prop(transform,translatey(-50%) translatex(-50%));
+}
